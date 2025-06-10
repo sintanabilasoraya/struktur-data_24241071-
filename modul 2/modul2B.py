@@ -1,3 +1,4 @@
+
 class Node:
     def __init__(self, data):
         self.data = data
@@ -79,21 +80,25 @@ class DoubleLinkedList:
 
 # Contoh penggunaan
 dll = DoubleLinkedList()
-dll.append(5)
 dll.append(10)
 dll.append(20)
 dll.append(30)
 dll.append(40)
-dll.append (10)
 
 print("Linked list awal:")
 dll.display()
 
-
-print("/nhapus node awal :")
+print("\nHapus node awal:")
 dll.delete_awal()
 dll.display()
 
-dll.delete_berdasarkan_nilai (40)
-dll.display ()
+print("\nHapus node akhir:")
+dll.delete_akhir()
+dll.display()
 
+print("\nHapus node dengan nilai 20:")
+dll.delete_berdasarkan_nilai(20)
+dll.display()
+
+print("\nCoba hapus data yang tidak ada (50):")
+dll.delete_berdasarkan_nilai(50)
